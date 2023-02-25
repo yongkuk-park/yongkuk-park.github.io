@@ -1,0 +1,706 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Yongkuk Park</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="5a5edf98-90f6-4771-95d2-18cbe7aa473d" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/webb1.jpg" style="object-position:center 11.39%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🔬</span></div><h1 class="page-title">Yongkuk Park</h1></header><div class="page-body"><div id="c0f10824-d5a5-46a8-a7c3-7ef3bf854a49" class="column-list"><div id="ac6e00e6-f9f8-49c9-a938-1939c290323b" style="width:62.5%" class="column"><blockquote id="d37e9861-afa7-45b2-816b-341820fd9c81" class="">Postdoctoral Researcher
+Chemical Engineering
+University of Massachusetts Amherst</blockquote><p id="97a7494e-8589-417b-a53c-bf6956d99587" class="">
+</p><blockquote id="d43b4e8f-fb23-4efb-a28d-6f152fbfa354" class=""><strong>Contact</strong>
+📧  Email: yongkukpark@umass.edu
+</blockquote></div><div id="a93f2a08-71b6-4999-8fe0-5a962bda8239" style="width:75.00000000000003%" class="column"><figure id="12356681-adba-42a4-8c47-4865ef9318e5" class="image"><a href="Yongkuk%20Park%205a5edf9890f6477195d218cbe7aa473d/IMG_2669.jpg"><img style="width:144px" src="Yongkuk%20Park%205a5edf9890f6477195d218cbe7aa473d/IMG_2669.jpg"/></a></figure><p id="a38c3193-a784-4772-ae5d-670412ff9534" class="">
+</p></div></div><div id="7734a899-0852-4a16-902e-8e44d6711618" class="column-list"><div id="730cf78a-ef25-4a7b-8242-fe9852892658" style="width:100%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="56e4b0e7-bda2-47c8-9814-46f79df846a2"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">I am currently looking for a postdoc position! Please feel free to email me if you think i’d be a good fit for your group. Here is a copy of my <a href="https://drive.google.com/file/d/1Rm-_NFAlhJUhWr4bnr5plEvESoPGmkMW/view?usp=sharing">CV</a>.</div></figure></div><div id="3d6f1e8f-7405-484b-a717-33486610ca4d" style="width:6.25%" class="column"><p id="7d57b111-a13c-462f-9de8-499f10c6c8c7" class="">
+</p></div></div><p id="29ed3c1d-2d2d-41b7-be7c-978ae182a302" class="">
+</p><p id="a68fc072-c72d-4db4-a654-776af5403e6a" class="">I am a postdoctoral researcher at University of Massachusetts Amherst. I earned my PhD in Chemical Engineering, with a focus in bone tissue engineering. During my PhD, my focus is on developing in vitro bone tissue models that can accurately mimic complex biological processes and systems. </p><p id="6b6e170e-4c52-48e6-b013-b55b5b893bcf" class="">
+</p><h2 id="fb5934af-ccb4-48ef-bf52-0d460b5425da" class="">🔬 Research Interest</h2><hr id="153514bb-5881-494d-ab09-9501bf53ca70"/><ul id="46cfa95b-6ab6-4782-bfaa-881480bc3217" class="bulleted-list"><li style="list-style-type:disc">Tissue engineering - In vitro tissue model</li></ul><ul id="2669264e-76a4-45b9-9d64-e8c05cbba041" class="bulleted-list"><li style="list-style-type:disc">Mechanotransduction, Mechanobiology - Device fabrication for mechanical cell culture </li></ul><ul id="af94433a-e625-42e2-b99a-c8a0dfd6ce12" class="bulleted-list"><li style="list-style-type:disc">Bone regeneration, regenerative medicine</li></ul><ul id="c332fda2-b55e-4626-948e-1914574ce945" class="bulleted-list"><li style="list-style-type:disc">Nucleic acid-based drug delivery</li></ul><ul id="dcf91ae0-680c-46a4-9592-e58416cf9da7" class="bulleted-list"><li style="list-style-type:disc">3D Bioprinting</li></ul><ul id="bb5c3c11-d379-4bea-b7ff-fcf3545d9efd" class="bulleted-list"><li style="list-style-type:disc">Microfluidic devices</li></ul><p id="7a444a55-e77d-4a71-9927-52ed611fa5a8" class="">
+</p><h2 id="40447a1b-b708-4503-9915-0d9ccb761de7" class="">🎓 Education</h2><hr id="39e36e51-2642-4d56-ab58-86f93ea53905"/><ul id="937a77e0-eb63-4b27-af98-0fb5a694bc6c" class="bulleted-list"><li style="list-style-type:disc"><strong>Ph.D.</strong>, Chemical Engineering, University of Massachusetts Amherst (2022)<p id="da142a3e-5acf-4cc8-b5a3-1e5fb92e7378" class="">Advised by <a href="https://blogs.umass.edu/jungwoo/group/">Jungwoo Lee</a></p><p id="5dca25da-d38c-4328-8413-d93fa93156d6" class="">(Thesis Title: Development of in vitro bone organoid models for the recapitulation of bone complexity)</p></li></ul><ul id="d9b97284-10bc-4806-96eb-1d52011e538f" class="bulleted-list"><li style="list-style-type:disc"><strong>M.S.</strong>, Chemical Engineering, University of Seoul, South Korea, (2016)<p id="2bf6eeb4-4517-464f-bd45-2104b1702019" class="">Advised by <a href="https://bna.uos.ac.kr/">Jong Bum Lee</a></p><p id="ae23f7e1-f480-4ba4-afc2-5c1cef9b5d93" class="">(Thesis Title: Step-wise dual enzyme polymerization (SDEP) for fabrication of DNA-RNA hybridization-based structures)</p></li></ul><ul id="4fd4437e-76d7-401e-9dbd-58cff39c953f" class="bulleted-list"><li style="list-style-type:disc"><strong>B.S.</strong>, Chemical Engineering, University of Seoul, South Korea, (2014)</li></ul><p id="c100c6d6-a6ff-4076-aad7-5c630d543218" class="">
+</p><h2 id="259bb374-a726-4a10-9cff-a2804880ad63" class="">📊 Publications | <a href="https://scholar.google.com/citations?hl=en&amp;user=5Ue1fqoAAAAJ">Google Scholar</a></h2><hr id="ffce4aeb-c0a6-4eb7-bb25-b6261b2a7f60"/><h2 id="dfe06e90-27de-4bce-adc3-1c2fa8a64654" class=""><strong>2021</strong></h2><div id="467534c4-7731-4dc4-a908-2a343dc3530e" class="column-list"><div id="315e0a55-5426-40bd-a8fc-4004006f4868" style="width:193.75%" class="column"><blockquote id="20860ba2-d28d-420c-a9c0-bf896783f36a" class=""><strong>Trabecular bone organoid model for studying the regulation of localized bone remodeling</strong>
+<span style="border-bottom:0.05em solid">Yongkuk Park</span>, Eugene Cheong, Jun-Goo Kwak, Ryan Carpenter, Jae-Hyuck Shim, Jungwoo Lee
+<em>Science Advances</em></blockquote><figure id="ed2e314d-cbc7-49d7-91cd-ab08d94187a8"><a href="https://www.science.org/doi/full/10.1126/sciadv.abd6495?rfr_dat=cr_pub++0pubmed&amp;url_ver=Z39.88-2003&amp;rfr_id=ori%3Arid%3Acrossref.org" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Science | AAAS</div></div><div class="bookmark-href"><img src="https://www.science.org/pb-assets/images/logos/apple-touch-icon-120x120.png" class="icon bookmark-icon"/>https://www.science.org/doi/full/10.1126/sciadv.abd6495?rfr_dat=cr_pub++0pubmed&amp;url_ver=Z39.88-2003&amp;rfr_id=ori%3Arid%3Acrossref.org</div></div></a></figure></div><div id="58f31aa5-9a17-432e-bbd1-4c941bf7bf59" style="width:6.25%" class="column"><p id="a9af3cc2-1478-4fb3-ac4b-51bbae50fb0c" class="">
+</p></div></div><div id="4030b030-1ac1-4fb1-ba99-48e6949f51af" class="column-list"><div id="1acc3b67-dca9-437c-a80d-4660f9f40a39" style="width:100%" class="column"><h2 id="bce7ba22-a98e-4861-98e0-d08e245ed890" class=""><strong>2020</strong></h2><blockquote id="1477c677-c927-45d2-8cb6-af8ab0de8764" class="">Double Controlled Release of Therapeutic RNA Modules through Injectable DNA–RNA Hybrid Hydrogel
+Sangwoo Han, <span style="border-bottom:0.05em solid">Yongkuk Park</span>, Hyejin Kim, Hyangsu Nam, Ohsung Ko, Jong Bum Lee
+<em>ACS Applied Materials &amp; Interfaces</em></blockquote><figure id="83a475ef-854c-4286-84ce-cbdd10335395"><a href="https://pubs.acs.org/doi/10.1021/acsami.0c12506" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://pubs.acs.org/doi/10.1021/acsami.0c12506</div></div></a></figure></div><div id="34906233-ef35-4230-8347-b7f8fbffbdff" style="width:6.25%" class="column"><p id="365278a6-8069-4a8b-a1b5-84359b6ef85d" class="">
+</p></div></div><h2 id="47d024c1-f97f-425b-9db7-cbd5445cb497" class="">~2016</h2><div id="ffbe651c-95c6-426d-89d1-7df73439f7b8" class="column-list"><div id="72947673-761b-430a-b526-4f3172b8000e" style="width:193.75%" class="column"><blockquote id="e46e514b-d5ba-41e5-bb28-7c20f6fccb47" class=""><strong>Self-assembled DNA-guided RNA Nanovector via Step-wise Dual Enzyme Polymerization (SDEP) for Carrier-free siRNA Delivery</strong>
+<span style="border-bottom:0.05em solid">Yongkuk Park</span>, Hyejin Kim, Jong Bum Lee
+<em>ACS Biomaterials Science &amp; Engineering </em>(2016)</blockquote><figure id="d23cae2b-5e6f-44d2-9495-7745c702237d"><a href="https://pubs.acs.org/doi/10.1021/acsbiomaterials.5b00554" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://pubs.acs.org/doi/10.1021/acsbiomaterials.5b00554</div></div></a></figure></div><div id="c619909e-39cd-4819-b403-cf1c96e24193" style="width:6.25%" class="column"><p id="eae029db-0406-4c96-8726-4040c3a5e1a1" class="">
+</p></div></div><div id="62cbac03-e788-4eff-8d5e-bd2c25624e5e" class="column-list"><div id="0f81f124-0b16-4498-8f53-ff19df77afbf" style="width:100%" class="column"><blockquote id="fe0faaa1-8e8e-4028-98f4-b81cbc8dfdf2" class=""><strong>Nucleic acid engineering: RNA following the trail of DNA</strong>
+Hyejin Kim, <span style="border-bottom:0.05em solid">Yongkuk Park</span>, Jieun Kim, Jaepil Jeong, Sangwoo Han, Jae Sung Lee, Jong Bum Lee
+<em>ACS Combinatorial Science </em>(2016)</blockquote></div><div id="6ce4aa6f-c53f-4393-b196-1a844e23580b" style="width:6.25%" class="column"><p id="5739a238-ad43-4c08-a359-3249f0e7f02b" class="">
+</p></div></div><div id="e6ccfd69-7fbd-48e4-8dd9-bad8fcf7993a" class="column-list"><div id="bcbb4f95-bbf1-4017-b14f-1aea1c0a17cf" style="width:193.75%" class="column"><blockquote id="8378966a-3129-4649-9956-b0fbc0b832bd" class=""><strong>Technological development of structural DNA/RNA-based RNAi systems and their applications</strong>
+Eun Hye Jeong, Hyejin Kim, Bora Jang, Hyesoo Cho, Jaehee Ryu, Boyeon Kim, <span style="border-bottom:0.05em solid">Yongkuk Park</span>, Jieun Kim, Jong Bum Lee, Hyukjin Lee <em>Advanced Drug Delivery Reviews </em>(2016)</blockquote></div><div id="6296c02b-b2c2-4cb9-8e4e-3f01569c6a4e" style="width:6.25%" class="column"><p id="00dd7893-620e-4c9d-a65d-16813e507114" class="">
+</p></div></div><div id="d6fb611e-ec1d-40b1-a96b-20fa6e75b252" class="column-list"><div id="e4dd30e0-3e65-4bb7-b235-715fd039578c" style="width:193.75%" class="column"><blockquote id="3d9ff0f1-4a34-4f31-b674-2a26bc93a870" class=""><strong>Self-assembled Messenger RNA Nanoparticles (mRNA-NPs) for Efficient Gene Expression</strong>
+Hyejin Kim, <span style="border-bottom:0.05em solid">Yongkuk Park</span>, Jong Bum Lee
+<em>Scientific Reports </em>(2015)</blockquote></div><div id="73e51360-58b6-4dc7-a6a9-f04885aa9e56" style="width:6.25%" class="column"><p id="6303abc0-4247-4aab-aa07-2dd1733a2f81" class="">
+</p></div></div><div id="224a942e-51de-4e79-bae5-180bc1af2128" class="column-list"><div id="d9ec2132-8ab2-420d-ae20-cca49a58889a" style="width:100%" class="column"><blockquote id="a8d9bce9-0620-4a97-aff7-6031414d8334" class=""><strong>Self-assembly of Free-standing RNA Membranes</strong>
+Daehoon Han, <span style="border-bottom:0.05em solid">Yongkuk Park</span>, Hyejin Kim, Jong Bum Lee
+<em>Nature Communications</em> (2014)</blockquote><figure id="d8b721d9-0c4f-4745-8498-53173a8c4400"><a href="https://www.nature.com/articles/ncomms5367" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Self-assembly of free-standing RNA membranes</div><div class="bookmark-description">Nature Communications - Nucleic acids possess a number of properties that can be beneficial for the fabrication of nanomaterials. Here, the authors present an enzymatically synthesised RNA...</div></div><div class="bookmark-href"><img src="https://www.nature.com/static/images/favicons/nature/apple-touch-icon-f39cb19454.png" class="icon bookmark-icon"/>https://www.nature.com/articles/ncomms5367</div></div><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fncomms5367/MediaObjects/41467_2014_Article_BFncomms5367_Fig1_HTML.jpg" class="bookmark-image"/></a></figure></div><div id="733a99dd-30bf-4956-8c20-7bd6a98812fe" style="width:6.25%" class="column"><p id="4af42605-c5c3-4eeb-a6b9-eaeb32355a4d" class="">
+</p></div></div><div id="ab2ef096-7e4f-47d3-9bae-0c562fd95f0c" class="column-list"><div id="ea9a2c0b-0ef7-49a0-ad61-2c2b9718170d" style="width:193.75%" class="column"><blockquote id="9fddb609-0138-494d-9571-5fbc24e65c0b" class=""><strong>Enzymatic Size Control of RNA Particles using Complementary Rolling Circle Transcription (cRCT) Method for Efficient siRNA Production</strong>
+Daehoon Han, <span style="border-bottom:0.05em solid">Yongkuk Park</span>, Hyangsu Nam, Jong Bum Lee
+<em>Chemical Communications</em> (2014)</blockquote></div><div id="5507157d-7461-420a-8ee1-957d23aab8e4" style="width:6.25%" class="column"><p id="e208fb21-8c9a-4032-b3aa-ebe78867b925" class="">
+</p></div></div><p id="37e48890-6ad6-4d01-aec2-4a4314efeb5d" class="">
+</p><p id="b805b443-384a-43d8-ae48-f6057b09eb5e" class="">
+</p><p id="f2f08942-7d11-495c-bc48-9fd5e3fc2793" class="">
+</p></div></article></body></html>
